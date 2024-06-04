@@ -1,0 +1,507 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --bg-color: rgb(255, 255, 255);
+    --second-bg-color: #c0b4b4;
+    --text-color: #161616;
+    --main-color: rgba(30, 113, 202, 0.877);
+    --other-color: red;
+    --bg-image: url(Deathstroke.jpg);
+    --image-opacity: 0.5;
+    --image-height: 100%;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    ;
+}
+
+
+
+.scrolled {
+    background-color: #333;
+}
+
+.scrolled #logo {
+    color: #fff;
+}
+
+.scrolled .nigga ul li a{
+    color: #fff;
+}
+
+.scrolled .nigga ul li a:hover {
+    color: #a9b10a; /* Change color on hover when scrolled */
+}
+
+
+
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-image: url(hearts.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(15px);
+    height: 100vh;
+
+}
+
+.home-content span {
+    font-size: 32px;
+}
+
+.home-content h1{
+    color: #beb20a;
+    text-transform: uppercase;
+    animation: animate 1s ease-in-out infinite alternate;
+}
+
+/* @keyframes animate{
+    from{
+        text-shadow: 0 0 20px #117a7e;
+    }
+    to{
+        text-shadow: 0 0 30px #117a7e,
+                     0 0 10px #117a7e;
+    }
+} */
+
+
+
+
+span{
+    color: var(--main-color);
+
+}
+.logo span{
+    color: var(--main-color);
+}
+
+
+
+
+
+
+.home-img {
+    position: relative;
+    width: 160vw;
+    height: 40vw;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  
+  .home-img img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(72deg);
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+  }
+  
+  .home-img img.current-image {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+    z-index: 1;
+  }
+  
+  .home-img img:hover {
+    box-shadow: 0 0 50px var(--main-color),
+      0 0 100px var(--main-color);
+  }
+  
+
+.home-content{
+    position: relative;
+    z-index: 20;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.home-content p{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.home-content h1{
+    font-size: 3rem;
+    font-weight: 1000;
+}
+
+
+
+
+
+
+.about__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+  }
+  
+  .cardz-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7in; /* Space between cards */
+    transform: translateY(-120%);
+  }
+  
+  .cardz {
+    width: 4in; /* Width of each card */
+    height: 3in; /* Height of each card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures content does not overflow rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+
+  .cardz i{
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .card-content i{
+    margin-top: 30px;
+  }
+
+  .card-content a{
+    margin-bottom: 20px;
+  }
+
+
+  
+  .card-content {
+    text-align: center;
+  }
+  
+  /* Colors */
+  .color-1 {
+    background-color: rgb(0, 212, 254);
+  }
+  
+  .color-2 {
+    background-color: rgb(255, 247, 0);
+  }
+  
+  .color-3 {
+    background-color: rgb(115, 178, 6);
+  }
+
+
+  .imaage {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /* transform: translateX(-50%); */
+}
+
+ 
+
+.space{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-image: url(hearts.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(15px);
+    height: 50vh;
+    top: -25%; /* Move the section 3 inches upwards */
+
+
+}
+
+
+.marsh{
+    height: 30vh;
+}
+
+
+.agency {
+    margin-top: 1in;
+}
+
+.agency h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #333;
+}
+
+.context {
+    display: flex; /* Use flexbox to center */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100%; /* Ensure the context div takes full height */
+}
+
+.context img {
+    height: 4in;
+    width: 6in;
+}
+
+.paragraph{
+    padding: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.paragraph p{
+    margin-top: 0.6in;
+}
+
+.my-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 0.5in;
+  }
+  
+  .my-button:hover {
+    background-color: #45a049;
+  }
+
+  .heaad{
+    text-align: center;
+  }
+
+  .heaad h2{
+    font-size: 2rem;
+  }
+
+
+
+
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1in;
+    gap: 1in;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1in;
+  }
+  
+  .card {
+    width: 3in;
+    height: 3in;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #005f77;
+}
+
+
+  
+
+
+  
+  .containerx {
+    display: flex;
+    height: 100%;
+  }
+  
+  .background {
+    flex: 1;
+    background-image: url('hearts.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+  
+  .cardx {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-contentx {
+    text-align: center;
+    margin-bottom: 4in;
+    margin-top: 3in;
+  }
+
+
+
+
+
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    height: 50vh;
+    padding: 30px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .footer-info,
+  .footer-hours,
+  .footer-social {
+    flex-basis: 20%;
+    margin-top: 0.6in;
+  }
+  
+  .footer-info h3,
+  .footer-hours h3,
+  .footer-social h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-info p,
+  .footer-hours ul,
+  .footer-social ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-info p {
+    margin: 0;
+  }
+  
+  .footer-info p:last-child {
+    margin-bottom: 20px;
+  }
+  
+  .footer-hours ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-social ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .footer-social a:hover {
+    color: #ff6f61;
+  }
